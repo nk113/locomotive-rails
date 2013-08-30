@@ -8,30 +8,30 @@ Great [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo) 
 Clone [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo) with destination name ```chef-repo```.
 
 ```sh
-git@github.com:intercity/locomotive-chef-repo.git
+git@github.com:intercity/locomotive-chef-repo.git chef-repo
 ```
 
-In the same directory clone **locomotive-rails** with destination name whatever you like but with no special character like '-'. Here I specify ```railsapp``` as an example.
+In the same directory clone **locomotive-rails** with destination name whatever you like.
+
+```sh
+git clone git@github.com:nk113/locomotive-rails.git
+```
 
 **Rails Application Name**
 
-You might need to update Rackfile if you change the destination name -- rails application name -- to what you want.
+You might need to update some files to change your rails application name. Since there is no convenient way to do so with rails 4 at the moment, grep like ```grep -ri 'locomotiverails' .``` and replace **LocomotiveRails** appers in lines with the name you like.
 
-```sh
-git clone git@github.com:nk113/locomotive-rails.git railsapp
-```
-
-Directory structure looks like below:
+Directory structure shuold look like below:
 
 ```
 (parent)
    |
-   |-- chef-repo  (locomotive-chef-repo)
+   |-- chef-repo        (locomotive-chef-repo)
    |
-   |-- railsapp   (locomotive-rails)
+   |-- locomotive-rails (locomotive-rails)
 ```
 
-Then in ```railsapp``` directory, 
+Then in ```locomotive-rails``` directory, 
 
 ```ssh
 bundle install

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Src::Application.config.secret_key_base = '76807c356c65323cdfcaec6dc5c560935fc87fd14b388e786857b2e1756d9d60ee431efc20fc4d7b8c33b9079a943549601b568c4db8e2a33c398bc6ec4af20a'
+LocomotiveRails::Application.config.secret_key_base = 'a3858471a7e58b82be941f050e4f498a6eb7d8be55a438cc6ac88f5c349e97ff05457b1de39ca2630562ec606278ae1db17278e1a14d02587bf45a5a3506d69b'

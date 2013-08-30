@@ -2,7 +2,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: railsapp_vagrant
+  database: locomotiverails_vagrant
   pool: 5
   username: vagrant
   host: 10.10.0.1

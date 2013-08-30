@@ -4,7 +4,7 @@ require 'open-uri'
 require 'openssl'
 
 
-PROJECT_NAME = File.basename(File.dirname(__FILE__))
+PROJECT_NAME = File.basename(File.dirname(__FILE__)).downcase.gsub(/[^0-9a-z _]/i, '')
 
 BOX = 'precise64'
 BOX_URL = 'http://files.vagrantup.com/precise64.box'
@@ -48,6 +48,7 @@ Vagrant.configure('2') do |config|
 
     chef.add_role 'vagrant'
     chef.add_role 'mysql'
+    chef.add_role 'redis'
     chef.add_role 'rails'
 
     chef.add_recipe 'rbenv::user'
