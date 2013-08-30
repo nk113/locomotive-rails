@@ -87,11 +87,9 @@ Vagrant.configure('2') do |config|
           :rails_env => 'vagrant',
           :deploy_user => DEPLOY_USER,
           :database_info => {
-            :adapter => 'mysql2',
             :username => 'vagrant',
             :password => '',
-            :database => "#{PROJECT_NAME}_vagrant",
-            :client_addresses => ['10.10.*',],
+            :client_addresses => ['10.%',],
           }
         }
       },

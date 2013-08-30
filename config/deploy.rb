@@ -11,7 +11,10 @@ ssh_options[:forward_agent] = true
 set :application, PROJECT_NAME
 set :stages, %w(vagrant staging production)
 set :scm, :git
-set :repository, "https://github.com/nk113/#{PROJECT_NAME}.git"
+
+# update this line to refer your repos
+set :repository, "https://github.com/nk113/locomotive-rails.git"
+
 set :default_stage, 'vagrant'
 set :user, 'deploy'
 set :use_sudo, false

@@ -1,7 +1,7 @@
 Readme
 ======
 
-Great [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo) + basic rails application with easy vagrant setup. You can run this application locally as usual too sharing database runs on vagrant - develop locally with webrick and test the app on vagrant with nginx + unicorn environment deploying using capistrano.
+Great [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo) + basic rails 4.0 application with easy vagrant setup. You can also run this application locally as usual sharing percona-mysql database runs on vagrant - develop locally with webrick and test the app on vagrant with production environment settings -- nginx + unicorn -- deploying using capistrano.
 
 ## Getting started
 
@@ -38,14 +38,10 @@ cap deploy
 
 You should be able to see something cool accessing ```http://localhost:8080``` with your browser.
 
-Run webrick to run the application locally.
+Launch webrick to run the application locally.
 
 ```ssh
 rails server
 ```
 
 That's it!
-
-## Sharing database
-
-You need to update ```config/database.yml``` to use mysql as the database and to share the database between host and vagrant instance. Database settings can be found in ```Vagrantfile```.
