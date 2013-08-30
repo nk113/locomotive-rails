@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-LocomotiveRails::Application.load_tasks
+RailsApp::Application.load_tasks

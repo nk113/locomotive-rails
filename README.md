@@ -13,6 +13,10 @@ git@github.com:intercity/locomotive-chef-repo.git
 
 In the same directory clone **locomotive-rails** with destination name whatever you like but with no special character like '-'. Here I specify ```railsapp``` as an example.
 
+**Rails Application Name**
+
+You might need to update Rackfile if you change the destination name -- rails application name -- to what you want.
+
 ```sh
 git clone git@github.com:nk113/locomotive-rails.git railsapp
 ```
