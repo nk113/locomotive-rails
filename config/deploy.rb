@@ -2,7 +2,7 @@ require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 
 
-PROJECT_NAME = File.basename(File.expand_path(File.join(File.dirname(__FILE__), '../')))
+PROJECT_NAME = File.basename(File.expand_path(File.join(File.dirname(__FILE__), '../'))).downcase.gsub(/[^0-9a-z _]/i, '')
 
 
 default_run_options[:pty] = true
