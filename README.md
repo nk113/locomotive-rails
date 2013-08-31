@@ -1,7 +1,7 @@
 Readme
 ======
 
-Great [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo) + basic rails 4.0 application with easy vagrant setup. You can also run this application locally as usual sharing percona-mysql database runs on vagrant - develop locally with webrick and test the app on vagrant with production environment settings -- nginx + unicorn -- deploying using capistrano.
+Easy vagrant setup for great [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo). You can develop your rails application locally with webrick and test the app on vagrant with production environment setting sharing database between host and guest vagrant box. Capistrano also works well with vagrant box.
 
 ## Getting started
 
@@ -11,27 +11,23 @@ Clone [locomotive-chef-repo](https://github.com/intercity/locomotive-chef-repo) 
 git@github.com:intercity/locomotive-chef-repo.git chef-repo
 ```
 
-In the same directory clone **locomotive-rails** with destination name whatever you like.
+In the same directory create rails app.
 
 ```sh
-git clone git@github.com:nk113/locomotive-rails.git
+rails new <name>
 ```
-
-**Rails Application Name**
-
-You might need to update some files to change your rails application name. Since there is no convenient way to do so with rails 4 at the moment, grep like ```grep -ri 'locomotiverails' .``` and replace **LocomotiveRails** appers in lines with the name you like.
 
 Directory structure shuold look like below:
 
 ```
 (parent)
    |
-   |-- chef-repo        (locomotive-chef-repo)
+   |-- chef-repo (locomotive-chef-repo)
    |
-   |-- locomotive-rails (locomotive-rails)
+   |-- <name>    (your rails application)
 ```
 
-Then in ```locomotive-rails``` directory, 
+Copy all files in this repository to your rails application directory updating repository parameter in ```config/deploy.rb``` then run following commands.
 
 ```ssh
 bundle install
