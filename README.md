@@ -27,7 +27,7 @@ Directory structure shuold look like below:
    |-- <name>    (your rails application)
 ```
 
-Copy all files in this repository to your rails application directory updating repository parameter in ```config/deploy.rb``` then run following commands.
+Copy all files in this repository to your rails application directory updating repository parameter in ```config/deploy.rb``` then run following commands. Update ```config/deploy/vagrant.rb``` appropriately if you have multiple vagrant instances in your local.
 
 ```ssh
 bundle install
